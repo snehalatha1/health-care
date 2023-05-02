@@ -1,5 +1,5 @@
 ---
- - name: Installing minikube-app on Test-server
+ - name: Minikube-app installation
    hosts: all
    become: true
    tasks:
@@ -11,7 +11,7 @@
      command: sudo mv ./kubectl /usr/local/bin/kubectl
    - name: 4
      command: sudo apt-get update
-   - name: install docker
+   - name: docker installation
      command: sudo apt-get install -y docker.io
      become: yes
    - name: start docker service using systemctl
